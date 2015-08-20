@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Silly Squid</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->  
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile1.4.5.min.css"/> 
+    <link href="css/custom.css" rel="stylesheet">  
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+<!--     <header>
+      <div class="container">
+          <div class="row">
+              <h1>Silly Squid time!</h1>
+          </div>
+      </div>
+    </header>   -->
+      
+    <div class="jumbotron">
+       <div class="container">    
+        <h1>Silly Squid Dance Party!</h1>
+         <p id="jumbo">Make Silly Squid dance on your command!</p>
+         <img class="media-object" src="img/stand.png" alt="Silly Squid">
+       </div> <!-- container -->   
+    </div><!-- jumbotron -->  
+
+    <section id="instructions">
+       <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+              <p id="instructions">Use the following gestures to make the Silly Squid dance</p>
+          </div><!-- col-md-6 -->
+          <div class="col-md-6">
+              <ul class="list-group">
+                <li class="list-group-item">Turn Right > Swipe Right</li>
+                <li class="list-group-item">Turn Left > Swipe Left</li>
+                <li class="list-group-item">Jump > Tap</li>
+              </ul>
+          </div><!-- col-md-6 -->
+         </div><!-- row -->
+       </div> <!-- container -->     
+     </section> <!-- instructions -->  
+      
+      
+    <script>
+        
+    $(function(){
+      $( "div.character" ).bind( "tap", tapHandler );
+
+      function tapHandler( event ){
+        $( event.target ).removeClass("walk-right walk-left");  
+        $( event.target ).addClass( "tap" );
+      }
+    });
+        
+    $(function(){
+    // Bind the swipeleftHandler callback function to the swipe event on div.character
+      $( "div.character" ).on( "swipeleft", swipeleftHandler );
+ 
+      // Callback function references the event target and adds the 'swipeleft' class to it
+      function swipeleftHandler( event ){
+        $( event.target ).removeClass("walk-right jump");  
+        $( event.target ).addClass( "walk-left" );
+      }
+    });    
+        
+    $(function(){
+    // Bind the swiperightHandler callback function to the swipe event on div.character
+      $( "div.character" ).on( "swiperight", swiperightHandler );
+ 
+      // Callback function references the event target and adds the 'swiperight' class to it
+      function swiperightHandler( event ){
+        $( event.target ).removeClass("walk-left jump");  
+        $( event.target ).addClass( "walk-right" );
+      }
+    });
+        
+    </script>  
+      
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    
+    <!-------------------- For jQuery mobile -------------------------------------------> 
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+</body>
+</html>
