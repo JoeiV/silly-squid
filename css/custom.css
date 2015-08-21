@@ -1,26 +1,27 @@
-body, html{
+body, html {
 	font-family: 'Montserrat', sans-serif;
-	color:#a3d3c6;
+	color: #a3d3c6;
     background-color: #f6ffff;
     font-weight: bold;
 }
-.clear{
+.clear {
 	clear: both;
 }
-.jumbotron{
+.jumbotron {
     box-shadow: 10px 10px 5px grey;
 }
-    .jumbotron h1{
+    .jumbotron h1 {
+        color: #a3d3c6;
         text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
         box-shadow: 10px 10px 5px grey;
     }
-h1{
+h1 {
 	padding: 10px;
     border: 1px solid;
     text-transform: uppercase;
     letter-spacing: 0.5em;
 }
-img.media-object{
+img.media-object {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -30,7 +31,28 @@ p {
     text-shadow: 1px 1px #383838;
     font-style: italic;
 }
-ul.list-unstyled{
+.container {
+	max-width: 600px;
+	width: 80%;
+	margin:auto;
+	text-align: center;
+	margin-top: 50px;
+}
+/* ------------- Silly Squid's Container ----------- */
+.character-container, .character{
+width: 350px;
+height: 350px;
+margin: auto;
+}
+/* ----------- Instruction Title ------------------- */
+h3 {
+   color: #82A99E;
+   text-shadow: 1px 1px 1px #303030; 
+   border-top: 0;
+   padding-top: 0;
+}
+/* --------- List of Swipe Commands -------------- */
+ul.list-unstyled {
     list-style-type: none;
     box-shadow: 8px 8px 5px grey;
     border: 1px solid #C1CAC7;
@@ -39,35 +61,23 @@ ul.list-unstyled{
     padding: 15px;
     margin: 10px;
 }
-h3 {
-   color: #82A99E;
-   text-shadow: 1px 1px 1px #303030; 
-   border-top: 0;
-   padding-top: 0;
-}
-.container{
-	max-width: 600px;
-	width: 80%;
-	margin:auto;
-	text-align: center;
-	margin-top: 50px;
-}
+
 /* ---- Making squid container his height & width --- */
-.character-container, .character{
-	width:350px;
+.character-container, .character {
+	width: 350px;
 	height: 350px;
-	margin:auto;
+	margin: auto;
 }
 /* ---- Classes for each of the squid's movements ---- */
-.character{
+.character {
 	background: url(../img/stand.png) no-repeat center center;
 }
-.tap{
+.tap {
     background-image: url(../img/jump.png);
 }
-.walk-left{
+.walk-left {
 	background-image: url(../img/left.png);
 }
-.walk-right{
+.walk-right {
 	background-image: url(../img/right.png);
 }
